@@ -1,4 +1,23 @@
 /* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rebeccapurple;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+}
+
+nav button {
+  padding: 1rem;
+  width: 150px;
+  font-size: 1rem;
 }
