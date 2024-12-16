@@ -7,6 +7,8 @@
 
 body {
   background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -14,10 +16,37 @@ header {
   display: flex;
   background-color: red;
   justify-content: center;
+  flex-grow: 0;
 }
 
 nav button {
   padding: 1rem;
   width: 150px;
   font-size: 1rem;
+  border: 0;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(100vh - 3rem);
+  justify-content: center;
+  align-items: center;
+}
+
+#content button {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  font-size: 1.5rem;
 }
