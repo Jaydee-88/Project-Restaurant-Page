@@ -26,6 +26,10 @@ nav button {
   border: 0;
 }
 
+.buttonActive {
+  background-color: rgb(70, 70, 70);
+}
+
 #content {
   display: flex;
   flex-direction: column;
