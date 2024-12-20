@@ -1,6 +1,8 @@
 import "./styles.css";
 import { loadHomePage } from "./homepage.js";
 import { loadMenuPage } from "./menupage.js";
+import { loadAboutPage } from "./aboutpage.js";
+import { loadContactUsPage } from "./contactuspage.js";
 
 const contentDiv = document.querySelector("#content");
 const homeButton = document.querySelector("#home");
@@ -37,11 +39,13 @@ navButtons.forEach((button) => {
     if (button.id === "about") {
       aboutButton.className = "buttonActive";
       console.log("about button clicked");
+      loadAboutPage();
     }
 
     if (button.id === "contactUs") {
       contactUsButton.className = "buttonActive";
       console.log("contact us button clicked");
+      loadContactUsPage();
     }
   });
 });
