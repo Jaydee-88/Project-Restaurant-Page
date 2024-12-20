@@ -1,5 +1,6 @@
 import "./styles.css";
 import { loadHomePage } from "./homepage.js";
+import { loadMenuPage } from "./menupage.js";
 
 const contentDiv = document.querySelector("#content");
 const homeButton = document.querySelector("#home");
@@ -12,11 +13,36 @@ contentDiv.innerHTML = "";
 
 // make a class that defaults load the home button. then the rest out blank and load their respective JS scripts.
 
-menuButton.addEventListener("click", (e) => {
-  console.log("clicked");
-  navButtons.forEach((el) => {
-    el.classList.remove("buttonActive");
+navButtons.forEach((button) => {
+  contentDiv.innerHTML = "";
+  button.classList.remove("buttonActive");
+
+  button.addEventListener("click", (e) => {
+    navButtons.forEach((el) => {
+      el.classList.remove("buttonActive");
+    });
+
+    if (button.id === "home") {
+      homeButton.className = "buttonActive";
+      console.log("home button clicked");
+      loadHomePage();
+    }
+
+    if (button.id === "menu") {
+      menuButton.className = "buttonActive";
+      console.log("menu button clicked");
+      loadMenuPage();
+    }
   });
-  menuButton.className = "buttonActive";
 });
+
+// menuButton.addEventListener("click", (e) => {
+//   console.log("clicked");
+//   navButtons.forEach((el) => {
+//     contentDiv.innerHTML = "";
+//     el.classList.remove("buttonActive");
+//     menuButton.className = "buttonActive";
+//   });
+// });
+
 loadHomePage();
