@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rebeccapurple;
+  background-color: #0353a4;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,7 +14,7 @@ body {
 
 header {
   display: flex;
-  background-color: red;
+  background-color: #b9d6f2;
   justify-content: center;
   flex-grow: 0;
 }
@@ -26,8 +26,16 @@ nav button {
   border: 0;
 }
 
+nav button:hover {
+  background-color: #575f66;
+}
+
+nav button:active {
+  background-color: #4e5a64;
+}
+
 .buttonActive {
-  background-color: rgb(70, 70, 70);
+  background-color: #4e5a64;
 }
 
 #content {

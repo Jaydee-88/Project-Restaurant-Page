@@ -33,16 +33,17 @@ navButtons.forEach((button) => {
       console.log("menu button clicked");
       loadMenuPage();
     }
+
+    if (button.id === "about") {
+      aboutButton.className = "buttonActive";
+      console.log("about button clicked");
+    }
+
+    if (button.id === "contactUs") {
+      contactUsButton.className = "buttonActive";
+      console.log("contact us button clicked");
+    }
   });
 });
-
-// menuButton.addEventListener("click", (e) => {
-//   console.log("clicked");
-//   navButtons.forEach((el) => {
-//     contentDiv.innerHTML = "";
-//     el.classList.remove("buttonActive");
-//     menuButton.className = "buttonActive";
-//   });
-// });
 
 loadHomePage();
