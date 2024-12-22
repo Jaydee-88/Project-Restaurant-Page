@@ -13,7 +13,7 @@ export function loadHomePage() {
   heroTextDiv.appendChild(headerPara1);
   heroTextDiv.appendChild(headerPara2);
   heroTextDiv.classList.add("heroText");
-  heroButton.textContent = "Get Free Demo Fast!";
+  heroButton.textContent = "Get Free Demo Fast!!";
 
   contentDiv.appendChild(heroTextDiv);
   contentDiv.appendChild(heroButton);
