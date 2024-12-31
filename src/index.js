@@ -15,6 +15,9 @@ contentDiv.innerHTML = "";
 
 // make a class that defaults load the home button. then the rest out blank and load their respective JS scripts.
 
+
+// Central
+
 navButtons.forEach((button) => {
   contentDiv.innerHTML = "";
   button.classList.remove("buttonActive");
