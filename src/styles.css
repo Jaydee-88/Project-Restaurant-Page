@@ -5,8 +5,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --navbar-button-color: #f1f1f1;
+  --navbar-button-hover: #a3a3a3;
+  --navbar-button-pressed: #8a8a8a;
+  --navbar-button-active: #535353;
+}
+
 body {
-  background-color: #0353a4;
+  background-color: #181818;
+  color: #e4e4e4;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -14,7 +22,7 @@ body {
 
 header {
   display: flex;
-  background-color: #b9d6f2;
+  background-color: #c2c2c2;
   justify-content: center;
   flex-grow: 0;
 }
@@ -24,18 +32,19 @@ nav button {
   width: 150px;
   font-size: 1rem;
   border: 0;
+  background-color: #f1f1f1;
 }
 
 nav button:hover {
-  background-color: #575f66;
+  background-color: var(--navbar-button-hover);
 }
 
 nav button:active {
-  background-color: #4e5a64;
+  background-color: var(--navbar-button-pressed);
 }
 
 .buttonActive {
-  background-color: #4e5a64;
+  background-color: var(--navbar-button-active);
 }
 
 #content {
