@@ -72,5 +72,29 @@ nav button:active {
   font-size: 1.5rem;
 }
 
-
 /* Menu Section */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  height: 100%;
+}
+
+.schedule-div {
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  align-items: center;
+  height: 3rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-block {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  width: 180px;
+  padding: 1rem;
+}
