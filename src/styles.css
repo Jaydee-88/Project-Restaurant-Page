@@ -102,7 +102,7 @@ h1 {
   position: relative;
 }
 
-h1::after {
+.heroText h1::after {
   content: "Where Every Sip Comes with a Purr!";
   color: rgb(0, 0, 0);
   position: absolute; /* Positions relative to .text */
@@ -144,4 +144,11 @@ h1::after {
 
 .hero-button--home:active {
   background-color: rgb(189, 143, 44);
+}
+
+/* Medium devices (desktops) */
+@media (min-width: 500px) and (max-width: 1200px) {
+  .description-div--home {
+    padding: 1.5rem 10rem;
+  }
 }
