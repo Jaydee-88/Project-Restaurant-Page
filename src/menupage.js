@@ -1,9 +1,7 @@
 export function loadMenuPage() {
   const contentDiv = document.querySelector("#content");
-  const menuTextDiv = document.createElement("div");
-  menuTextDiv.classList.add("menu-section");
-  const headerPara1 = document.createElement("h1");
-  const headerPara2 = document.createElement("h1");
+  const menuSection = document.createElement("div");
+  menuSection.classList.add("menu-section");
 
   contentDiv.innerHTML = "";
 
@@ -32,11 +30,50 @@ export function loadMenuPage() {
     timingDiv.appendChild(header2);
   }
 
-  headerPara1.textContent = "Put Menu here";
-  headerPara2.textContent = "List all menu and use ul & li";
+  const headerMenu = document.createElement("h1");
+  headerMenu.textContent = "Coffee's";
+  const coffeeLists = [
+    { name: "Americano", price: "$19" },
+    { name: "Espresso", price: "$29" },
+    { name: "Cappuccino", price: "$18" },
+    { name: "Latte", price: "$19" },
+    { name: "Macchiato", price: "$29" },
+    { name: "Flat White", price: "$29" },
+    { name: "Mocha", price: "$18" },
+    { name: "Matcha Latte", price: "$19" },
+    { name: "Irish Coffee", price: "$29" },
+    { name: "Turkish Coffee", price: "$29" },
+  ];
 
-  menuTextDiv.appendChild(timingDiv);
-  menuTextDiv.appendChild(headerPara1);
-  menuTextDiv.appendChild(headerPara2);
-  contentDiv.appendChild(menuTextDiv);
+  const menuDiv = document.createElement("div");
+  menuDiv.classList.add("menu-block--menu");
+  menuDiv.appendChild(headerMenu);
+
+  coffeeLists.forEach((el) => {
+    const coffeeName = document.createElement("p");
+    const coffeePrice = document.createElement("p");
+    const menuListDiv = document.createElement("div");
+    const hr = document.createElement("hr");
+    menuListDiv.classList.add("menu-list--menu");
+    coffeeName.classList.add("coffee-name--menu");
+
+    if (el.description) {
+      console.log("if there is description");
+    }
+
+    hr.style.width = "100%";
+    hr.style.opacity = "0.5";
+
+    coffeeName.textContent = el.name;
+    coffeePrice.textContent = el.price;
+
+    menuListDiv.appendChild(coffeeName);
+    menuListDiv.appendChild(coffeePrice);
+    menuDiv.appendChild(menuListDiv);
+    menuDiv.appendChild(hr);
+  });
+
+  menuSection.appendChild(timingDiv);
+  menuSection.appendChild(menuDiv);
+  contentDiv.appendChild(menuSection);
 }
