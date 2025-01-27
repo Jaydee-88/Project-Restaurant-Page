@@ -1,14 +1,15 @@
 import "./styles.css";
 import "./styles/menu-page.css";
+import "./styles/contact-page.css";
 import { loadHomePage } from "./homepage.js";
 import { loadMenuPage } from "./menupage.js";
-import { loadAboutPage } from "./aboutpage.js";
+// import { loadAboutPage } from "./aboutpage.js";
 import { loadContactUsPage } from "./contactuspage.js";
 
 const contentDiv = document.querySelector("#content");
 const homeButton = document.querySelector("#home");
 const menuButton = document.querySelector("#menu");
-const aboutButton = document.querySelector("#about");
+// const aboutButton = document.querySelector("#about");
 const contactUsButton = document.querySelector("#contactUs");
 const navButtons = document.querySelectorAll("nav button");
 
@@ -39,11 +40,11 @@ navButtons.forEach((button) => {
       loadMenuPage();
     }
 
-    if (button.id === "about") {
-      aboutButton.className = "buttonActive";
-      console.log("about button clicked");
-      loadAboutPage();
-    }
+    // if (button.id === "about") {
+    //   aboutButton.className = "buttonActive";
+    //   console.log("about button clicked");
+    //   loadAboutPage();
+    // }
 
     if (button.id === "contactUs") {
       contactUsButton.className = "buttonActive";

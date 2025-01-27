@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgb(189, 143, 44);
+  --navbar-button-color: #f1f1f1;
+  --navbar-button-hover: #a3a3a3;
+  --navbar-button-pressed: #8a8a8a;
+  --navbar-button-active: #535353;
+  --border-radius-global: 0.4rem;
+}
+
+.header--contacts {
+  font-size: 4rem;
+}

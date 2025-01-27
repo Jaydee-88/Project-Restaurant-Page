@@ -22,12 +22,11 @@ export function loadMenuPage() {
   // display text in scheduleArray and append in timingDiv
   for (let i = 0; i < scheduleArray.length; i++) {
     // create text element and append each days
-
     // Make it Accordian flush type and Button type
-    const header2 = document.createElement("h2");
-    header2.classList.add("schedule-block");
-    header2.textContent = scheduleArray[i];
-    timingDiv.appendChild(header2);
+    // const header2 = document.createElement("h2");
+    // header2.classList.add("schedule-block");
+    // header2.textContent = scheduleArray[i];
+    // timingDiv.appendChild(header2);
   }
 
   const headerMenu = document.createElement("h1");
