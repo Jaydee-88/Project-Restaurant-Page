@@ -109,6 +109,7 @@ h1 {
   border: none;
   outline: none;
   border-radius: var(--border-radius-global);
+  cursor: pointer;
 }
 
 .hero-button--home:hover {

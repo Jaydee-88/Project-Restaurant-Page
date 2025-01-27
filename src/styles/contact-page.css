@@ -11,8 +11,59 @@
   --navbar-button-pressed: #8a8a8a;
   --navbar-button-active: #535353;
   --border-radius-global: 0.4rem;
+  --stroke: 0.4px rgb(255, 253, 253);
 }
 
 .header--contacts {
   font-size: 4rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  color: var(--main-color);
+  position: relative;
+  -webkit-text-stroke: var(--stroke);
+}
+
+.header--contacts::after {
+  content: "Contact us";
+  color: rgb(0, 0, 0);
+  position: absolute; /* Positions relative to .text */
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places it behind the text */
+  -webkit-text-stroke: 0;
+}
+
+.contact-section--contacts {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-div--contacts {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-block--contacts {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-global);
+  width: 350px;
+  padding: 1rem;
+  gap: 4px;
+  background-color: #535353;
+  border: 1px solid rgb(27, 27, 27);
+}
+
+.contact-block--contacts h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--main-color);
+  -webkit-text-stroke: var(--stroke);
+  z-index: 0;
+}
+
+.contact-block--contacts span {
+  -webkit-text-stroke: 0;
 }
